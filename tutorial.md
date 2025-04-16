@@ -3,9 +3,9 @@ References : [PRS-CS github](https://github.com/getian107/PRScs), [PRS-CS paper]
 The data we are going to use are already preprocessed or downloaded.
 
 
-Make sure your server has Python built-in, or you could use conda environment. Upload the PRS file to your 
+Make sure Python and PLINK are installed on your server or local machine, either system-wide or within a Conda environment. Upload the PRS file to your working directory and unzip it before proceeding.
 
-### 1. Navigate to the 3_PRS folder and create a new directory called result to store outputs from the practice session
+### 1. Navigate to the PRS folder and create a new directory called result to store outputs from the practice session
 ```
 cd PRS
 ``` 
@@ -41,7 +41,7 @@ cd result
 for i in {1..22}; do cat "prscs_pst_eff_a1_b0.5_phiauto_chr$i.txt" >> prscs_chr1-22.txt; done
 ``` 
 
-### 4. (If you have plink in your server or )Move back to the parent directory and run PLINK to calculate the polygenic risk score (PRS) based on the output from PRS-CS.
+### 4.Move back to the parent directory and run PLINK to calculate the polygenic risk score (PRS) based on the output from PRS-CS.
 Columns 2, 4, and 6 represent the SNP ID, the effect allele, and the effect size of the effect allele, respectively.
 
 ```
@@ -53,4 +53,4 @@ path_to_plink/plink \
 --score result/prscs_chr1-22.txt 2 4 6 \
 --out result/score
 ``` 
-#### NOTE: Since are using relative paths in the commands (except for Step 4), please make sure to run all commands from within the 3_PRS directory. Alternatively, you can modify the commands to use absolute paths if you’re running them from a different location.
+#### NOTE: Since are using relative paths in the commands (except for Step 4), please make sure to run all commands from within the PRS directory. Alternatively, you can modify the commands to use absolute paths if you’re running them from a different location.
