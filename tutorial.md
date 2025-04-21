@@ -1,3 +1,5 @@
+# PRS Tutorial at PENN (April 22)
+
 In this tutorial, we are going to construct polygenic risk score using PRS-CS. \
 References : [PRS-CS github](https://github.com/getian107/PRScs), [PRS-CS paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6467998/). \
 The data we are going to use are already preprocessed or downloaded.
